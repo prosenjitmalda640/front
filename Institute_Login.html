@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style>
+  .container:hover {
+
+   box-shadow: 0 0 8rem 0 rgba(10, 20, 30, 1); 
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   transition: 1s;
+    border: 1px solid white;
+}
+
+
+body{
+  background-image: url('C:/Users/Prosenjit/Pictures/Project-1/outlook.jpg');
+  background-color: white;
+  background-size: cover;
+}
+</style>
+</head>
+<body >
+    <nav class="navbar" data-spy="affix" data-offset-top="70" style="background-color: black; position:static;"><p class="display-1" style="color: white;">Institute Student's Login</p></nav>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="container"style=" width: 80%;border-radius: 25px;" >
+          <p class="display-2" style="padding: 10px;text-align: center; color: aliceblue;"> Student  Register </p>
+          <div class="row" style="padding: 10px;">
+            <div class="col-sm-6" style="padding: 10px;">
+              <div class="form-floating mb-5"padding10px>
+                <input type="text" maxlength="30" class="form-control" id="floatingInput"placeholder="first name" style="font-size: 15px; border-radius: 10px;" required>
+                <label for="floatingInput" style="color: #1a73e8;" aria-required="false">First name</label>
+              </div>
+            </div>
+            <div class="col-sm-5" style="padding: 10px;">
+              <div class="form-floating mb-5">
+                <input type="text" maxlength="20" class="form-control" id="floatingInput"  placeholder="last name"  style="font-size: 15px; border-radius: 10px; " required>
+                <label for="floatingInput" style="color: #1a73e8; ">Last name</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8" style="padding-left: 10px;">
+              <div class="form-floating mb-5">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="font-size: 15px; border-radius: 10px; height:30% ;" required>
+                <label for="floatingInput" style="color: #1a73e8;">Enter Email Address</label>
+                <p style="color: #6c757d; font-size: 12px;padding: 8px;">You can use letters,numbers & periods</p>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="form-floating mb-5">
+                <input type="tel" maxlength="10" class="form-control" id="floatingInput" placeholder="0123456789" style="font-size: 15px; border-radius: 10px;" required>
+                <label for="floatingInput" style="color: #1a73e8;">Mobile number</label>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="form-floating mb-5">
+                <input type="password" maxlength="30" class="form-control" id="inputpsw" placeholder="Password" style="font-size: 15px; border-radius: 10px;">
+                <label for="floatingInput" style="color: #1a73e8;">Password</label>
+                <p style="color: #6c757d;font-size: 12px;padding: 8px;">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+              </div>
+            </div>
+            <div class="col-sm-5"  >
+              <div class="form-floating mb-5">
+                <input type="password" maxlength="30" class="form-control" id="inputpsw1" placeholder="Confirm Password" style="font-size: 15px; border-radius: 10px;">
+                <label for="floatingInput" style="color: #1a73e8;">Confirm Password</label>
+              </div> 
+            </div>
+            <div class="col-sm-4">
+              <input type="checkbox" onclick="myFunction()" ><label style="color: #1a73e8;padding: 5px;font-size: 15px;">Show Password</label> 
+              <script>
+                function myFunction() {
+                  var two
+                      var x = document.getElementById("inputpsw");
+                      if (x.type === "password") {
+                        x.type = "text";
+                        
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+              </script>
+            </div> 
+            <div class="col-sm-9">
+              <div class="form-floating">
+                <textarea class="form-control" rows="5"  id="floatingComment" placeholder="Address" style="font-size: 15px; border-radius: 10px;height: 50px;"></textarea>
+                <label for="floatingComment" style="font-size: 10px;color: #1a73e8;">Student Address</label>
+              </div>
+            </div>
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-4" style="padding: 15px;">
+                <button class="btn btn-lg btn-default" style="border-radius: 10px;" type="button"  onclick="document.getElementById('signin').style.display='block'" > Sign Up</button>
+            </div>
+            <div class="col-sm-8" style="padding: 15px;text-align: center;">
+              <p   onclick="document.getElementById('signin').style.display='block'" > <a href="#" style="text-decoration: none;"><span style="padding: 15px 15px 15px 15px;text-align: center;font-size: 16px;">Already have an account please Sign in</span></a></button>
+            </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-6" style="display: none; " id="signin" >
+        <div class="container"style="width: 80%;  border-radius:25px; " >
+          <p class="display-2" style="padding: 10px;text-align: center; color: aliceblue;">Student's Login</p>
+          <div class="row" >
+            <div class="col-sm-8">
+              <div class="form-floating mb-5" style="align-items: center;" >
+                <input type="email" class="form-control" id="floatingInput" placeholder="Email or Phone" style="font-size: 15px; border-radius: 10px; height:30% ;">
+                <label for="floatingInput" style="color: #1a73e8;"> Email or Phone</label>
+                <p style="color: #6c757d; font-size: 12px">You can use letters,numbers & periods</p>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="form-floating mb-5">
+                <input type="password" maxlength="30" class="form-control" placeholder="Password" id="floatingInput"placeholder="Password"  style="font-size: 15px; border-radius: 10px;">
+                <label for="floatingInput" style="color: #1a73e8;">Password</label>
+                <p style="color: #6c757d;font-size: 12px;">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+              </div>
+            </div>
+            <div class="col-sm-5">
+            </div>
+            <div class="col-sm-5" style="padding: 15px;">
+                <button class="btn btn-lg btn-success"> Sign In</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <h2>Prosenjit</h2>      
+  </body>
+</html>
